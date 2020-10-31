@@ -7,32 +7,156 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "00C41302-294E-48ED-BC29-F122E7EB2560"
+            uuid = "060E51E3-85B7-408B-B592-22F67398ADDA"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "YLFollowers/ViewControllers/FollowersListViewController.swift"
+            filePath = "YLFollowers/ViewControllers/UserInfo/UserInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "didTapGetFollowers(for:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D692B8E1-03F9-4DE7-AF15-FB652AA51275"
+            uuid = "56591BC4-DF87-49F5-A3EF-3DB25415D966"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YLFollowers/ViewControllers/UserInfo/UserInfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "UserInfoViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "56591BC4-DF87-49F5-A3EF-3DB25415D966 - 801ad82d6f1cbb4d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "YLFollowers.UserInfoViewController.delegate.getter : Swift.Optional&lt;YLFollowers.FollowerListVCDelegate&gt;"
+                  moduleName = "YLFollowers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yulialopatina/swift/GitHubFollowers/YLFollowers/YLFollowers/ViewControllers/UserInfo/UserInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "135">
+               </Location>
+               <Location
+                  uuid = "56591BC4-DF87-49F5-A3EF-3DB25415D966 - b9fe1640eeb629b9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "YLFollowers.UserInfoViewController.delegate.setter : Swift.Optional&lt;YLFollowers.FollowerListVCDelegate&gt;"
+                  moduleName = "YLFollowers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yulialopatina/swift/GitHubFollowers/YLFollowers/YLFollowers/ViewControllers/UserInfo/UserInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "181">
+               </Location>
+               <Location
+                  uuid = "56591BC4-DF87-49F5-A3EF-3DB25415D966 - 4d973cc2e6b84fc8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "YLFollowers.UserInfoViewController.delegate.modify : Swift.Optional&lt;YLFollowers.FollowerListVCDelegate&gt;"
+                  moduleName = "YLFollowers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yulialopatina/swift/GitHubFollowers/YLFollowers/YLFollowers/ViewControllers/UserInfo/UserInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  uuid = "56591BC4-DF87-49F5-A3EF-3DB25415D966 - 1aeebb156aedaa47"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "YLFollowers.UserInfoViewController.delegate.modify : Swift.Optional&lt;YLFollowers.FollowerListVCDelegate&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "YLFollowers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yulialopatina/swift/GitHubFollowers/YLFollowers/YLFollowers/ViewControllers/UserInfo/UserInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "56591BC4-DF87-49F5-A3EF-3DB25415D966 - 532aed0aed013e5d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "YLFollowers.UserInfoViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; YLFollowers.UserInfoViewController"
+                  moduleName = "YLFollowers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yulialopatina/swift/GitHubFollowers/YLFollowers/YLFollowers/ViewControllers/UserInfo/UserInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "841">
+               </Location>
+               <Location
+                  uuid = "56591BC4-DF87-49F5-A3EF-3DB25415D966 - 21acb9514b24507c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "YLFollowers.UserInfoViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;YLFollowers.UserInfoViewController&gt;"
+                  moduleName = "YLFollowers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yulialopatina/swift/GitHubFollowers/YLFollowers/YLFollowers/ViewControllers/UserInfo/UserInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "782">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "42269A94-1E02-48E6-9FA2-706ABCDB1495"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YLFollowers/ViewControllers/FollowersListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "configureSearchController()"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "FollowerListVCDelegate"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "67C921A9-4601-45C1-AEC8-C28D481BD6C0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YLFollowers/ViewControllers/FollowersListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
+            landmarkName = "didRequestFollowers(for:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
