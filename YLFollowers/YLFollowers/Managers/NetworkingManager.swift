@@ -6,42 +6,43 @@
 //  Copyright © 2020 Юлия Лопатина. All rights reserved.
 //
 
-import Foundation
+import UIKit
 class NetworkingManager {
     
     static let shared = NetworkingManager()
     let baseURL = "https://api.github.com/users/"
+    let cache = NSCache<NSString, UIImage>()
     
     private init() {}
     
-    func getFollowers(for username: String, page: Int, completed: @escaping ([Follower]?, String?) -> Void) {
+    func getFollowers(for username: String, page: Int, completed: @escaping (Result<[Follower], ErrorMessage>) -> Void) {
         let endpoint = baseURL + "\(username)/followers?per_page=100&page=\(page)"
         
         guard let url = URL(string: endpoint) else {
-            completed(nil, "This username create an invalid request. Please, try again")
+            completed(.failure(.invalidUsername))
             return
         }
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             
             if let _ = error {
-                completed(nil, "Unable to complete your request. Please, check your internet connection")
+                completed(.failure(.unableToComplete))
             }
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                 completed(nil, "Invalid response from the server, please try again")
+                completed(.failure(.invalidResponse))
                 return
             }
             guard let data = data else {
-                completed(nil, "The data, recieved from the server, is invalid. Please, try again")
+                completed(.failure(.invalidData))
                 return
             }
             do {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 let followers = try decoder.decode([Follower].self, from: data)
-                completed(followers, nil)
+                completed(.success(followers))
             } catch {
-                completed(nil,"The data recieved from the the server is invalid. Please, try again")
+                completed(.failure(.invalidData))
             }
         }
         
