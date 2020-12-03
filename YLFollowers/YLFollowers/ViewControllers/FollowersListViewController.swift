@@ -12,7 +12,7 @@ protocol FollowerListVCDelegate: class {
     func didRequestFollowers(for username: String)
 }
 
-class FollowersListViewController: UIViewController, UICollectionViewDelegate {
+class FollowersListViewController: DataLoadingViewController, UICollectionViewDelegate {
     enum Section {
         case main
     }
@@ -25,6 +25,16 @@ class FollowersListViewController: UIViewController, UICollectionViewDelegate {
     var hasMoreFollowers = true
     var filteredFollowers : [Follower] = []
     var isSearching = false
+    
+    init(username: String) {
+        super.init(nibName: nil, bundle: nil)
+        self.username = username
+        title = username 
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +54,37 @@ class FollowersListViewController: UIViewController, UICollectionViewDelegate {
         navigationController?.setNavigationBarHidden(false, animated: true)
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
+        navigationItem.rightBarButtonItem = addButton
+    }
+    
+    @objc func addButtonTapped() {
+        showLoadingView()
+        
+        NetworkingManager.shared.getUsers(for: username) {[weak self] result in
+            guard let self = self else {return}
+            self.dismissLoadingView()
+            
+            switch result {
+            case .success(let user):
+                let favorite = Follower(login: user.login, avatarUrl: user.avatarUrl)
+                
+                PersitenceManager.updateWith(favorite: favorite, actionType: .add) { [weak self] error in
+                    guard let self = self else { return }
+                    
+                    guard let error = error else {
+                        self.presentAlertOnMainThread(title: "Success!", message: "You have successfully favorited this user 🎉", buttonTitle: "Hooray!")
+                        return
+                    }
+                    
+                    self.presentAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
+                }
+                
+            case .failure(let error):
+                self.presentAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
+            }
+
+    }
     }
     
     func configureCollectionView() {

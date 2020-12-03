@@ -33,18 +33,27 @@ class UserInfoHeaderViewController: UIViewController {
         addSubviews()
         layoutUI()
         configureUIElements()
+        downloadAvatarImage()
     }
     
-   func configureUIElements() {
-        avatarImageView.downloadImage(from: user.avatarUrl)
+    func downloadAvatarImage() {
+        NetworkingManager.shared.downloadImage(from: user.avatarUrl) {[weak self] image in guard let self = self else {return}
+            DispatchQueue.main.async {
+                self.avatarImageView.image = image
+            }
+        }
+    }
+    
+    func configureUIElements() {
+        
         usernameLabel.text = user.login
         nameLabel.text = user.name ?? ""
         locationLabel.text = user.location ?? ""
         bioLabel.text = user.bio ?? ""
         bioLabel.numberOfLines = 3
-    
-    locationImageView.image = UIImage(systemName: "mappin.and.ellipse")
-    locationImageView.tintColor = .secondaryLabel
+        
+        locationImageView.image = UIImage(systemName: "mappin.and.ellipse")
+        locationImageView.tintColor = .secondaryLabel
     }
     
     func addSubviews() {
@@ -55,7 +64,7 @@ class UserInfoHeaderViewController: UIViewController {
         view.addSubview(locationLabel)
         view.addSubview(bioLabel)
     }
-
+    
     func layoutUI() {
         let padding: CGFloat            = 20
         let textImagePadding: CGFloat   = 12
@@ -93,5 +102,5 @@ class UserInfoHeaderViewController: UIViewController {
             bioLabel.heightAnchor.constraint(equalToConstant: 60)
         ])
     }
-
+    
 }
