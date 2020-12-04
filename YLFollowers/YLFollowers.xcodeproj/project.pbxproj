@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9B217AE125799D0000833ECA /* AlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B217AE025799D0000833ECA /* AlertContainerView.swift */; };
 		9B217AE32579AD7100833ECA /* DataLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B217AE22579AD7100833ECA /* DataLoadingViewController.swift */; };
+		9B217AE5257A62D100833ECA /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B217AE4257A62D100833ECA /* UIView+Ext.swift */; };
+		9B217AE7257A708300833ECA /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B217AE6257A708300833ECA /* UITableView+Ext.swift */; };
 		9B2C8DDE2541E3CF00A0236F /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2C8DDD2541E3CF00A0236F /* NetworkingManager.swift */; };
 		9B4FC6B32542FD5A00E18B93 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4FC6B22542FD5A00E18B93 /* ErrorMessage.swift */; };
 		9B4FC6B52549A5FE00E18B93 /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4FC6B42549A5FE00E18B93 /* FollowerCell.swift */; };
@@ -48,6 +50,8 @@
 /* Begin PBXFileReference section */
 		9B217AE025799D0000833ECA /* AlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertContainerView.swift; sourceTree = "<group>"; };
 		9B217AE22579AD7100833ECA /* DataLoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoadingViewController.swift; sourceTree = "<group>"; };
+		9B217AE4257A62D100833ECA /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		9B217AE6257A708300833ECA /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
 		9B2C8DDD2541E3CF00A0236F /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		9B4FC6B22542FD5A00E18B93 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		9B4FC6B42549A5FE00E18B93 /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
@@ -233,6 +237,8 @@
 				9B6A0D13253CBF0F00A122E3 /* UIViewController+Alert.swift */,
 				9B4FC6D3254DFA0F00E18B93 /* Date+Ext.swift */,
 				9B4FC6D5254DFB8100E18B93 /* String+Ext.swift */,
+				9B217AE4257A62D100833ECA /* UIView+Ext.swift */,
+				9B217AE6257A708300833ECA /* UITableView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -376,6 +382,7 @@
 				9B6A0D0E253CA9F600A122E3 /* TitleLabel.swift in Sources */,
 				9B4FC6CA254DC32F00E18B93 /* ItemInfoView.swift in Sources */,
 				9B6A0D1B253EC91800A122E3 /* User.swift in Sources */,
+				9B217AE7257A708300833ECA /* UITableView+Ext.swift in Sources */,
 				9B4FC6DC254E1C4300E18B93 /* FavoriteTableViewCell.swift in Sources */,
 				9B4FC6B72549AA8D00E18B93 /* AvatarImageView.swift in Sources */,
 				9B6A0D08253C6A0700A122E3 /* SampleButton.swift in Sources */,
@@ -387,6 +394,7 @@
 				9B4FC6D0254DEEFA00E18B93 /* FollowerItemViewController.swift in Sources */,
 				9B2C8DDE2541E3CF00A0236F /* NetworkingManager.swift in Sources */,
 				9B8A9AC7256E861200B6A29F /* MainTabBarController.swift in Sources */,
+				9B217AE5257A62D100833ECA /* UIView+Ext.swift in Sources */,
 				9B4FC6C6254DA1BB00E18B93 /* UserInfoHeaderViewController.swift in Sources */,
 				9B4FC6CE254DEB5100E18B93 /* RepoItemViewController.swift in Sources */,
 			);

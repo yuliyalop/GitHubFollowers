@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol ItemInfoVCDelegate: class {
+    func didTapGitHubProfile(for user: User)
+    func didTapGetFollowers(for user: User)
+}
+
 class ItemInfoViewController: UIViewController {
     
     let stackView = UIStackView()
@@ -16,7 +21,7 @@ class ItemInfoViewController: UIViewController {
     let actionButton = SampleButton()
     
     var user: User!
-    weak var delegate: UserInfoVCDelegate!
+    weak var delegate: ItemInfoVCDelegate!
     
     
     init(user: User) {
@@ -57,8 +62,7 @@ class ItemInfoViewController: UIViewController {
     @objc func actionButtonTapped() {}
     
     private func layout() {
-        view.addSubview(stackView)
-        view.addSubview(actionButton)
+        view.addSubviews(stackView,actionButton)
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
         let padding: CGFloat = 20

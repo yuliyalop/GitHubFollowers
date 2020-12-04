@@ -9,8 +9,7 @@
 import UIKit
 
 protocol UserInfoVCDelegate: class {
-    func didTapGitHubProfile(for user: User)
-    func didTapGetFollowers(for user: User)
+    func didRequestFollowers(for username: String)
 }
 
 class UserInfoViewController: DataLoadingViewController {
@@ -21,7 +20,7 @@ class UserInfoViewController: DataLoadingViewController {
     let itemViewTwo = UIView()
     var itemViews: [UIView] = []
     var dateLabel = BodyLabel(textAlignment: .center)
-    weak var delegate: FollowerListVCDelegate!
+    weak var delegate: UserInfoVCDelegate!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,7 +109,7 @@ class UserInfoViewController: DataLoadingViewController {
 
 }
 
-extension UserInfoViewController: UserInfoVCDelegate {
+extension UserInfoViewController: ItemInfoVCDelegate {
     func didTapGitHubProfile(for user: User) {
         guard let url = URL(string: user.htmlUrl) else {
             presentAlertOnMainThread(title: "Invalid URL", message: "The url attached to this user is invalid.", buttonTitle: "Ok")

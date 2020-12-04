@@ -23,6 +23,7 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        view.addSubviews(logoImageView,usernameTextfield,callToActionButton)
         
         configureLogoImageView()
         configureTextField()
@@ -53,7 +54,6 @@ class SearchViewController: UIViewController {
     }
 
     func configureLogoImageView() {
-        view.addSubview(logoImageView)
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
         logoImageView.image = UIImage(named: "gh-logo")
         
@@ -70,7 +70,6 @@ class SearchViewController: UIViewController {
     }
 
     func configureTextField() {
-        view.addSubview(usernameTextfield)
         usernameTextfield.delegate = self
         
         NSLayoutConstraint.activate([
@@ -83,7 +82,6 @@ class SearchViewController: UIViewController {
     
     
     func configureCallToActionButton() {
-        view.addSubview(callToActionButton)
         callToActionButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside )
         
         NSLayoutConstraint.activate([
