@@ -154,10 +154,10 @@
             filePath = "YLFollowers/ViewControllers/FollowersListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "195"
-            endingLineNumber = "195"
-            landmarkName = "FollowersListViewController"
-            landmarkType = "21">
+            startingLineNumber = "198"
+            endingLineNumber = "198"
+            landmarkName = "didRequestFollowers(for:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
